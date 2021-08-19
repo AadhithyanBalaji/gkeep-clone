@@ -1,0 +1,32 @@
+<mat-card class="example-card" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseExit()">
+    <mat-card-header>
+        <mat-card-title>{{note.title}} </mat-card-title>
+        <mat-card-subtitle class="date-subtitle">{{note.lastEdited | date : 'mediumDate'}} , {{note.lastEdited | date : 'shortTime'}}
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <section class="pending-section">
+            <mat-checkbox class="example-margin" *ngFor="let task of note.pendingTasks">{{task}}</mat-checkbox>
+        </section>
+        <hr *ngIf="note.pendingTasks && note.pendingTasks.length > 0" />
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false" *ngIf="note.pendingTasks && note.pendingTasks.length > 0">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <div>
+                        <span class="completed-list-title">{{note.pendingTasks.length + ' completed items' }}</span>
+                    </div>
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <section class="completed-section">
+                <mat-checkbox class="example-margin" *ngFor="let task of note.completedTasks">{{task}}</mat-checkbox>
+            </section>
+        </mat-expansion-panel>
+    </mat-card-content>
+    <mat-card-actions>
+        <div class="note-actions-container" [ngClass]="{'showItem' : hoverMode}">
+            <button mat-icon-button aria-label="close note button" (click)="deleteNote(note)">
+                <mat-icon>delete</mat-icon>
+            </button>
+        </div>
+    </mat-card-actions>
+</mat-card>

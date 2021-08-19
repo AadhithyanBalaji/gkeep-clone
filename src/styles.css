@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-color: #202124;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.showItem {
+    opacity: 0;
+    transition: opacity 0.5s linear;
+}
+
+.sc {
+    color: rgba(255, 255, 255, 0.87);
+}
+
+
+/* material styles */

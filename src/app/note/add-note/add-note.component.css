@@ -1,0 +1,20 @@
+::ng-deep .mat-form-field,
+::ng-deep .mat-card-title,
+::ng-deep .mat-card-header-text,
+::ng-deep .mat-checkbox-layout,
+::ng-deep .mat-checkbox-label {
+    width: 100%;
+}
+
+.example-margin {
+    width: 100%;
+}
+
+.pending-task-container div {
+    display: inline-block;
+}
+
+.note-input {
+    margin-left: 15px;
+    width: 80%;
+}
