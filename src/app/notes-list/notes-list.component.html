@@ -1,0 +1,10 @@
+<div class="notes-holder">
+    <div class="note-container" *ngFor="let note of notes">
+        <app-note [note]="note" (onDelete)="noteDeleted($event)"></app-note>
+    </div>
+</div>
+<div class="add-btn-container">
+    <button mat-fab color="primary" aria-label="Example icon button with a add icon" (click)="addNote()">
+        <mat-icon>add</mat-icon>
+    </button>
+</div>

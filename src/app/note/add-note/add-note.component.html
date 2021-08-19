@@ -1,0 +1,50 @@
+<div class="full-width">
+    <mat-card class="example-card">
+        <mat-card-header>
+            <mat-card-title>
+                <mat-form-field class="example-full-width">
+                    <input matInput [(ngModel)]="note.title">
+                </mat-form-field>
+            </mat-card-title>
+            <mat-card-subtitle class="date-subtitle">{{note.lastEdited | date : 'mediumDate'}} , {{note.lastEdited | date : 'shortTime'}}
+            </mat-card-subtitle>
+            <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" (click)="onClose()">
+                <mat-icon>close</mat-icon>
+            </button>
+        </mat-card-header>
+        <mat-card-content>
+            <section class="pending-section">
+                <div class="pending-task-container" *ngFor="let task of note.pendingTasks; let i=index">
+                    <div>
+                        <mat-checkbox></mat-checkbox>
+                    </div>
+                    <div class="note-input" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseExit()">
+                        <mat-form-field class="example-full-width">
+                            <input matInput (focus)="onTaskFocus(i)" autocomplete="off">
+                        </mat-form-field>
+                    </div>
+                    <div class="remove-task" [ngClass]="{'showItem': hoverMode}">
+                        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" (click)="removeTask(i)">
+                            <mat-icon>close</mat-icon>
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <hr *ngIf="note.completedTasks && note.completedTasks.length > 0" />
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false" *ngIf="note.completedTasks && note.completedTasks.length > 0">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        <div>
+                            <span class="completed-list-title">{{note.completedTasks.length + ' completed
+                                items'}}</span>
+                        </div>
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <section class="completed-section">
+                    <mat-checkbox class="example-margin" *ngFor="let task of note.completedTasks">{{task}}
+                    </mat-checkbox>
+                </section>
+            </mat-expansion-panel>
+        </mat-card-content>
+    </mat-card>
+</div>
