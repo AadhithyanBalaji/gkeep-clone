@@ -18,12 +18,31 @@ export class NoteService {
       let note = new Note();
       note.id = "asdfasdfasdfadsf";
       note.title = "Title";
-      note.pendingTasks = ["alamdlsf;a9sd87a5sd5", "basdfasdfasdfa087d89as6f0as6df", "casdfasdfasdfdasfasdf"];
+      note.pendingTasks = this.generateRandomTasks(Math.random() * 15);
       note.completedTasks = ["1", "asdfasdfasdf0978adsf90asdf2", "3"];
       note.lastEdited = new Date();
       this.notes.push(note);
     }
     this.notesSubject.next(this.notes);
+  }
+
+  generateRandomTasks(count: number): string[] {
+    let tasks = [];
+    for (let i = 0; i < count; i++) {
+      tasks.push(this.makeid(Math.random() * 7));
+    }
+    return tasks;
+  }
+
+  makeid(length): string {
+    var result = '';
+    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var charactersLength = characters.length;
+    for (var i = 0; i < length; i++) {
+      result += characters.charAt(Math.floor(Math.random() *
+        charactersLength));
+    }
+    return result;
   }
 
   requestNotes() {

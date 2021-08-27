@@ -1,7 +1,9 @@
 .example-card {
-    max-width: 300px;
+    max-width: 240px;
     border-radius: 15px;
-    border: 2px solid gray;
+    border: 1px solid #5f6368;
+    background-color: unset !important;
+    color: #e8eaed;
 }
 
 .example-section {
@@ -14,11 +16,16 @@
     text-align: center;
 }
 
+.mat-expansion-panel {
+    background-color: unset;
+}
+
 .mat-expansion-panel:not([class*=mat-elevation-z]) {
     box-shadow: none;
 }
 
-.completed-section {
+.completed-section,
+.pending-section {
     display: flex;
     flex-direction: column;
 }
@@ -43,5 +50,5 @@
 
 ::ng-deep .mat-dialog-container {
     padding: 0px !important;
-    border-radius: 15px !important;
+    border-radius: 8px !important;
 }
