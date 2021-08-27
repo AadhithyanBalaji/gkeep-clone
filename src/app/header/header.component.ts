@@ -8,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   constructor() { }
-  value;
+  value: string;
+  inputFocus: boolean;
   ngOnInit(): void {
+  }
+
+  clearSearchInput() {
+    this.value = '';
   }
 
 }

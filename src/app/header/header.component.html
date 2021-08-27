@@ -13,24 +13,29 @@
             </div>
         </div>
         <div class="search-container-flex">
-            <div class="search-bar-container">
-                <form>
-                    <button mat-icon-button aria-label="Icon to indicate search bar" class="sc search-icon">
+            <div class="search-bar-container" [ngClass]="{'bg-invert': inputFocus}">
+                <div class="search-form">
+                    <button mat-icon-button aria-label="Icon to indicate search bar" class="si-left sc search-icon" [ngClass]="{'bg-invert': inputFocus}">
                         <mat-icon>search</mat-icon>
                     </button>
                     <div class="search-input-container">
-                        <input class="search-input" type="text">
+                        <input class="search-input" [ngClass]="{'text-color-invert': inputFocus}" type="text" [(ngModel)]="value" placeholder="Search" (focusin)="inputFocus = true" (focusout)="inputFocus = false">
                     </div>
-                    <button mat-icon-button aria-label="Icon to close search" class="sc search-icon">
+                    <button *ngIf="value" mat-icon-button aria-label="Icon to close search" class="si-right sc search-icon" [ngClass]="{'bg-invert': inputFocus}" (click)="clearSearchInput()">
                         <mat-icon>close</mat-icon>
                     </button>
-                </form>
+                </div>
+            </div>
+            <div class="search-form-mobile">
+                <button mat-icon-button aria-label="Icon to indicate search bar" class="sc search-icon">
+                    <mat-icon>search</mat-icon>
+                </button>
             </div>
             <div>
                 <button mat-icon-button aria-label="Icon to toggle menu" class="sc circle-button">
                     <mat-icon>refresh</mat-icon>
                 </button>
-                <button mat-icon-button aria-label="Icon to toggle menu" class="sc circle-button">
+                <button mat-icon-button aria-label="Icon to toggle menu" class="sc circle-button view-agenda">
                     <mat-icon>view_agenda</mat-icon>
                 </button>
                 <button mat-icon-button aria-label="Icon to toggle menu" class="sc circle-button">

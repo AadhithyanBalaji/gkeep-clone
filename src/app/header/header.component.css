@@ -14,7 +14,7 @@
 .logo-container {
     flex: 1 0 auto;
     align-items: center;
-    padding-right: 30px;
+    padding-right: 10px;
     display: flex;
     min-width: 232px;
 }
@@ -69,14 +69,22 @@ a:active {
     flex: 1 1 100%;
     display: flex;
     height: 48px;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .search-icon {
-    margin: 0 5px 0 5px;
+    margin: 0;
     border-radius: 50%;
     height: 40px;
     width: 40px;
+}
+
+.si-left {
+    margin: 0 6px 0 9px;
+}
+
+.si-right {
+    margin: 0 9px 0 6px;
 }
 
 .circle-button:hover,
@@ -88,11 +96,13 @@ a:active {
     /* flex: 1 1 auto; */
     background: rgba(241, 243, 244, 0.24);
     border-radius: 8px;
+    width: 722px;
     /* height: 46px; */
 }
 
 .search-input-container {
     display: inline;
+    width: 100%;
     /* height: 46px; */
 }
 
@@ -103,15 +113,75 @@ a:active {
     outline: none;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    color: white;
+    width: 83%;
+    height: 46px;
+    font: normal 16px Google Sans, Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+    color: rgba(255, 255, 255, 0.87);
+}
+
+.bg-invert {
+    background-color: white;
+    color: #5f6368;
+}
+
+.text-color-invert {
+    color: #5f6368 !important;
+}
+
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.87);
 }
 
 .search-input-container:focus {
     background-color: white;
 }
 
+.search-form {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.search-form-mobile {
+    display: none;
+}
+
 .user-actions-flex {
     display: flex;
     align-items: center;
     padding-left: 30px;
+}
+
+@media (max-width:1024px) {
+    .search-bar-container {
+        width: 468px !important;
+    }
+}
+
+@media (min-width:760px) and (max-width:1023px) {
+    .search-bar-container {
+        width: 250px !important;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .search-bar-container {
+        display: none;
+    }
+    .search-form-mobile {
+        display: flex;
+        align-items: center;
+    }
+    .logo-container {
+        min-width: 175px;
+    }
+    .view-agenda {
+        display: none;
+    }
+    .search-icon {
+        margin: unset;
+    }
+    .user-actions-flex {
+        padding: unset;
+    }
 }
