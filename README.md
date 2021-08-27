@@ -1,6 +1,15 @@
-# ToDo
+# Google Keep Clone
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.2.
+I ❤️ Google Keep and use it to make my lists and stay organized
+This repository has been created with the intention to attempt create a clone of Keep using Angular + Material. I aim to learn new things in this attempt!
+
+I have learnt the following so far..
+<ul>
+<li>
+  Custom scroll bar
+  </li>
+  </ul>
+  
 
 ## Development server
 
