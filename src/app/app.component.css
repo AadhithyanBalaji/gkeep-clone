@@ -1,3 +1,9 @@
 #notes-list-container {
+    display: flex;
     margin-top: 65px;
+}
+
+.notes-area {
+    display: flex;
+    flex-direction: column;
 }

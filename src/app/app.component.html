@@ -1,4 +1,10 @@
-<app-header></app-header>
+<app-header (toggleMenu)="onToggleMenu()"></app-header>
 <div id="notes-list-container">
-    <app-notes-list></app-notes-list>
+    <div>
+        <app-side-bar #sideBar></app-side-bar>
+    </div>
+    <div class="notes-area">
+        <app-note-creator></app-note-creator>
+        <app-notes-list></app-notes-list>
+    </div>
 </div>

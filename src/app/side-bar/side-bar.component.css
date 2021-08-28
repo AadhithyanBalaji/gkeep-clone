@@ -1,0 +1,63 @@
+.side-bar-wrapper {
+    width: 80px;
+    height: 100%;
+    padding-top: 7px;
+    background-color: #202124;
+    z-index: 1;
+}
+
+.expanded {
+    width: 280px;
+}
+
+.fixed {
+    position: fixed;
+    -webkit-box-shadow: 0 16px 10px 0 rgb(0 0 0 / 14%), 0 11px 18px 0 rgb(0 0 0 / 12%), 0 13px 5px -1px rgb(0 0 0 / 20%);
+    box-shadow: 0 16px 10px 0 rgb(0 0 0 / 14%), 0 11px 18px 0 rgb(0 0 0 / 12%), 0 13px 5px -1px rgb(0 0 0 / 20%);
+}
+
+.selected {
+    background-color: #41331c;
+}
+
+.selectedCircle {
+    background-color: #41331c;
+    border-radius: 50%;
+}
+
+.side-bar-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item {
+    display: flex;
+    padding-left: 12px;
+    align-items: center;
+    width: 95%;
+    border: 1px solid transparent;
+    border-radius: 0 25px 25px 0;
+}
+
+.hoverMenu:hover {
+    background-color: #28292c;
+}
+
+.menu-icon {
+    padding: 0 12px;
+    height: 46px;
+    fill: #e8eaed;
+}
+
+.menu-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-left: 20px;
+    color: #e8eaed;
+    letter-spacing: .01785714em;
+    font-family: 'Google Sans', Roboto, Arial, sans-serif;
+    font-size: .875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+}

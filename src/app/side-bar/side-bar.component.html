@@ -1,0 +1,11 @@
+<div class="place-holder" style="width: 80px"></div>
+<div class="side-bar-wrapper" [ngClass]="{'expanded': expand, 'fixed' : inPlace}" (mouseover)="mouseIn()" (mouseout)="mouseOut()">
+    <div class="side-bar-menu">
+        <div class="menu-item" [ngClass]="{'hoverMenu': !menu.selected, 'selected': menu.selected && expand}" *ngFor="let menu of menus">
+            <svg class="menu-icon" [ngClass]="{'selectedCircle': menu.selected && !expand}" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path [attr.d]="path" *ngFor="let path of menu.icon"></path>
+            </svg>
+            <span class="menu-text">{{expand ? menu.text : ''}}</span>
+        </div>
+    </div>
+</div>

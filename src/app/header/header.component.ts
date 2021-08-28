@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+
 
 @Component({
   selector: 'app-header',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+
+  @Output() toggleMenu = new EventEmitter();
 
   constructor() { }
   value: string;
@@ -15,6 +18,10 @@ export class HeaderComponent implements OnInit {
 
   clearSearchInput() {
     this.value = '';
+  }
+
+  onToggleMenu() {
+    this.toggleMenu.next(true);
   }
 
 }

@@ -44,6 +44,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
 import { AddNoteComponent } from './note/add-note/add-note.component';
 import { FormsModule } from '@angular/forms';
+import { NoteCreatorComponent } from './note-creator/note-creator.component';
+import { SideBarComponent } from './side-bar/side-bar.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +53,9 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     NotesListComponent,
     NoteComponent,
-    AddNoteComponent
+    AddNoteComponent,
+    NoteCreatorComponent,
+    SideBarComponent
   ],
   imports: [
     BrowserModule,

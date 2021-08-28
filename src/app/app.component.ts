@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { SideBarComponent } from './side-bar/side-bar.component';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ToDo';
+
+  @ViewChild('sideBar') sideBar: SideBarComponent;
+
+  onToggleMenu() {
+    this.sideBar.toggleMenu();
+  }
 }
