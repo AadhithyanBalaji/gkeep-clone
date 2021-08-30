@@ -106,19 +106,6 @@ a:active {
     /* height: 46px; */
 }
 
-.search-input {
-    background: transparent;
-    /* height: 46px; */
-    border: none;
-    outline: none;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 83%;
-    height: 46px;
-    font: normal 16px Google Sans, Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
-    color: rgba(255, 255, 255, 0.87);
-}
-
 .bg-invert {
     background-color: white;
     color: #5f6368;
@@ -126,10 +113,6 @@ a:active {
 
 .text-color-invert {
     color: #5f6368 !important;
-}
-
-.search-input::placeholder {
-    color: rgba(255, 255, 255, 0.87);
 }
 
 .search-input-container:focus {

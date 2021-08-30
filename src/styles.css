@@ -69,3 +69,48 @@ body::-webkit-scrollbar-thumb:hover {
 .mat-card {
     background-color: none;
 }
+
+.search-input {
+    background: transparent;
+    /* height: 46px; */
+    border: none;
+    outline: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 83%;
+    height: 46px;
+    font: normal 16px Google Sans, Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+    color: rgba(255, 255, 255, 0.87);
+    letter-spacing: .00625em;
+    font-family: 'Google Sans', Roboto, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+}
+
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.87);
+}
+
+
+/* margin styles */
+
+.ml-10 {
+    margin-left: 10px !important;
+}
+
+.ml-15 {
+    margin-left: 15px !important;
+}
+
+.mr-15 {
+    margin-right: 15px !important;
+}
+
+.ml-5 {
+    margin-left: 5px !important;
+}
+
+.mr-5 {
+    margin-right: 5px !important;
+}
